@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>链表</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.8409cfa8.css" as="style"><link rel="preload" href="/assets/js/app.acfda23a.js" as="script"><link rel="preload" href="/assets/js/2.691d6914.js" as="script"><link rel="preload" href="/assets/js/8.8575d2a5.js" as="script"><link rel="prefetch" href="/assets/js/10.337650b1.js"><link rel="prefetch" href="/assets/js/3.d7fd7093.js"><link rel="prefetch" href="/assets/js/4.685e2bcc.js"><link rel="prefetch" href="/assets/js/5.8553ce50.js"><link rel="prefetch" href="/assets/js/6.7e793e37.js"><link rel="prefetch" href="/assets/js/7.12551ef1.js"><link rel="prefetch" href="/assets/js/9.79074161.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8409cfa8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-navbar"><!----> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>数据结构和算法</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/datastructure/base/" class="sidebar-link">数据结构基础</a></li><li><a href="/datastructure/queue/" class="sidebar-link">队列</a></li><li><a href="/datastructure/stack/" class="sidebar-link">栈</a></li><li><a href="/datastructure/linkedlist/" class="active sidebar-link">链表</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/datastructure/linkedlist/#写在前面" class="sidebar-link">写在前面</a></li><li class="sidebar-sub-header"><a href="/datastructure/linkedlist/#线性表逻辑结构" class="sidebar-link">线性表逻辑结构</a></li><li class="sidebar-sub-header"><a href="/datastructure/linkedlist/#线性表存储结构" class="sidebar-link">线性表存储结构</a></li><li class="sidebar-sub-header"><a href="/datastructure/linkedlist/#adt" class="sidebar-link">ADT</a></li><li class="sidebar-sub-header"><a href="/datastructure/linkedlist/#静态顺序存储，动态顺序存储" class="sidebar-link">静态顺序存储，动态顺序存储</a></li><li class="sidebar-sub-header"><a href="/datastructure/linkedlist/#静态存储的寻址" class="sidebar-link">静态存储的寻址</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="链表"><a href="#链表" class="header-anchor">#</a> 链表</h1> <h2 id="写在前面"><a href="#写在前面" class="header-anchor">#</a> 写在前面</h2> <p>数据结构就是各数据元素之间的逻辑关系，大致分为集合关系，线性关系，树关系，图关系</p> <h2 id="线性表逻辑结构"><a href="#线性表逻辑结构" class="header-anchor">#</a> 线性表逻辑结构</h2> <p>由n(n≥0)个数据元素构成的有限序列。记作: L=(a1 ,a2...,an)</p> <p><img src="https://user-gold-cdn.xitu.io/2020/2/28/1708c6f4ba10773c?w=819&amp;h=457&amp;f=png&amp;s=309211" alt="">
+前面的珠子就叫直接前驱，后面的叫直接后继，表长就是数据元素个数</p> <h2 id="线性表存储结构"><a href="#线性表存储结构" class="header-anchor">#</a> 线性表存储结构</h2> <p>线性表在内存中的两种数据结构</p> <ul><li>链式存储</li> <li>顺序存储，静态，动态</li></ul> <h2 id="adt"><a href="#adt" class="header-anchor">#</a> ADT</h2> <p><img src="https://user-gold-cdn.xitu.io/2020/2/28/1708c8161af37ea9?w=1268&amp;h=371&amp;f=png&amp;s=415165" alt=""></p> <p><img src="https://user-gold-cdn.xitu.io/2020/2/28/1708c81936784625?w=1265&amp;h=402&amp;f=png&amp;s=446022" alt="">
+更复杂的操作组合完成</p> <h2 id="静态顺序存储，动态顺序存储"><a href="#静态顺序存储，动态顺序存储" class="header-anchor">#</a> 静态顺序存储，动态顺序存储</h2> <p>在内存中找一块固定大小地方放下，在c语言中可以由一维数组实现，如果超出该内存大小就会溢出</p> <p>描述顺序存储结构</p> <ol><li>存储空间的起始位置:数组data,它的存储位置就是存储空间的存储位置。</li> <li>线性表的最大存储容量:数组长度MaxSize。</li> <li>线性表的当前长度: length。</li></ol> <hr> <p>数组长度和线性表的长度</p> <ul><li>注意数组长度和线性表的长度，数组的长度是存放线性表的存储空间的长度，存储分配后这个量是一般是不变的</li> <li>线性表的长度是线性表中数据元素的个数，随着线性表插入和删除操作的进行,这个量是变化的。</li></ul> <p><img src="https://user-gold-cdn.xitu.io/2020/2/29/1708c8fe9e4d8da4?w=1250&amp;h=397&amp;f=png&amp;s=129619" alt=""></p> <hr> <p>静态顺序存储，动态顺序存储</p> <ul><li>一般高级语言， 比如C、VB、C++都可以用编程手段实现动态分配数组，不过这会带来性能上的损耗。</li> <li>动态顺序存储，如果数组长度不够用了，溢出了，那么会在内存中找一块更大的地方把线性表搬过去</li></ul> <h2 id="静态存储的寻址"><a href="#静态存储的寻址" class="header-anchor">#</a> 静态存储的寻址</h2> <p><img src="https://user-gold-cdn.xitu.io/2020/2/29/1708c94b6f9caaba?w=1116&amp;h=281&amp;f=png&amp;s=86078" alt="">
+由于每个数据元素，不管它是整型、实型还是字符型，它都是需要占用一定的存储单元空间的。假设占用的是c个存储单元，那么线性表中第i+1个数据元素的存储位置和第i个数据元素的存储位置，LOC(ai) = LOC(a1) + (i-1)C</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/datastructure/stack/" class="prev">
+        栈
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.acfda23a.js" defer></script><script src="/assets/js/2.691d6914.js" defer></script><script src="/assets/js/8.8575d2a5.js" defer></script>
+  </body>
+</html>

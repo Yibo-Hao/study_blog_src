@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据结构基础</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.8409cfa8.css" as="style"><link rel="preload" href="/assets/js/app.acfda23a.js" as="script"><link rel="preload" href="/assets/js/2.691d6914.js" as="script"><link rel="preload" href="/assets/js/7.12551ef1.js" as="script"><link rel="prefetch" href="/assets/js/10.337650b1.js"><link rel="prefetch" href="/assets/js/3.d7fd7093.js"><link rel="prefetch" href="/assets/js/4.685e2bcc.js"><link rel="prefetch" href="/assets/js/5.8553ce50.js"><link rel="prefetch" href="/assets/js/6.7e793e37.js"><link rel="prefetch" href="/assets/js/8.8575d2a5.js"><link rel="prefetch" href="/assets/js/9.79074161.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8409cfa8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-navbar"><!----> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>数据结构和算法</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/datastructure/base/" class="active sidebar-link">数据结构基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/datastructure/base/#写在前面" class="sidebar-link">写在前面</a></li><li class="sidebar-sub-header"><a href="/datastructure/base/#基本概念" class="sidebar-link">基本概念</a></li><li class="sidebar-sub-header"><a href="/datastructure/base/#总结" class="sidebar-link">总结</a></li><li class="sidebar-sub-header"><a href="/datastructure/base/#算法" class="sidebar-link">算法</a></li></ul></li><li><a href="/datastructure/queue/" class="sidebar-link">队列</a></li><li><a href="/datastructure/stack/" class="sidebar-link">栈</a></li><li><a href="/datastructure/linkedlist/" class="sidebar-link">链表</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数据结构基础"><a href="#数据结构基础" class="header-anchor">#</a> 数据结构基础</h1> <h2 id="写在前面"><a href="#写在前面" class="header-anchor">#</a> 写在前面</h2> <p>我们所需要的如栈、队列、链表、散列表等结构，以及查找、排序等算法，在编程语言的开发工具包中都有完美的实现，我只需要掌握如何使用它们就可以了，为什么还要去弄懂这里面的算法原理呢?</p> <hr> <h2 id="基本概念"><a href="#基本概念" class="header-anchor">#</a> 基本概念</h2> <p><strong>数据结构 + 算法 = 程序设计</strong></p> <ul><li>数据:所有能输入到计算机中并被计算机程序加工、处理的符号的总称。如:整数、实数、字符、声音、图象、图形等。</li> <li>数据元素:数据的基本单位。(元素、记录、结点、顶点)</li> <li>数据项:是数据的不可分割的最小单位。如:姓名、年龄等一个数据元素可由一个或多个数据项组成。构成数据元素的数据称作该数据元素的数据项</li> <li>数据对象:由性质相同(类型相同)的数据元素组成的<strong>集合</strong>。数据对象是数据的一个子集。</li> <li>数据结构：数据结构是指相互之间存在一定联系（关系）的数据元素的集合。元素之间的相互联系（关系）称为逻辑结构。</li></ul> <p><img src="https://user-gold-cdn.xitu.io/2020/2/21/17066920beb68b52?w=473&amp;h=130&amp;f=png&amp;s=24745" alt=""><br>
+一行为数据元素（一个记录），一列为数据项，两行就是数据对象，两行之间的联系就是数据结构，数据是个非常大的概念什么都可以是数据</p> <p><img src="https://user-gold-cdn.xitu.io/2020/2/21/17066a4c725baa61?w=981&amp;h=346&amp;f=png&amp;s=269801" alt=""></p> <p><img src="https://user-gold-cdn.xitu.io/2020/2/21/170669403b9f15a8?w=760&amp;h=415&amp;f=png&amp;s=280650" alt=""></p> <hr> <ul><li>数据结构分为逻辑结构，存储结构</li> <li>逻辑结构：数据结构是指相互之间存在一定联系（关系）的数据元素的集合。元素之间的相互联系（关系）称为逻辑结构。</li> <li>存储结构:数据结构在计算机中的实际表达方式，它包括对数据元素的表示和对关系的表示。存储结构主要有：顺序存储、链式存储、索引存储和散列存储。</li></ul> <hr> <ul><li>一种数据结构＋定义在此种数据结构上的一组操作＝结构类型</li> <li>一种值的集合＋定义在此种值的集合上的一组操作＝原子类型</li> <li>结构类型＋原子类型＝数据类型</li> <li>数据结构是一种值的集合，这种值集＋值集上的操作就是结构类型，而结构类型是数据类型中的一种
+<img src="https://user-gold-cdn.xitu.io/2020/2/21/17066b212ee3429d?w=691&amp;h=437&amp;f=png&amp;s=70601" alt=""></li></ul> <hr> <ul><li>数据类型：是一个值的集合和定义在这个值集上的一组操作的总称。</li> <li>抽象数据类型：是指一个数学模型以及定义在该模型上的一组操作。</li> <li>数据类型和抽象数据类型的相同点在于它们具有相同的逻辑特性，不同点在于数据类型即关系数据集的逻辑特性又关系其物理特性，而抽象数据类型只关心数据集的抽象特性</li></ul> <hr> <ul><li>数据结构：是相互之间存在一种或多种特定关系的数据元素的集合，包括逻辑结构和物理结构。</li> <li>数据类型：是一个值的集合和定义在这个值集上的一组操作的总称。</li> <li>抽象数据类型：是指一个数学模型以及定义在该模型上的一组操作。</li> <li>抽象数据类型可以由三元组（DSP）表示<br>
+D表示数据对象<br>
+S是D中数据元素之间的关系集<br>
+P是对D中数据元素的基本操作。</li></ul> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>数据类型一分为二使两边的人都可以更集中注意力于自己的工作范围，进行更深的钻研。使用抽象数据类型是指仅仅关注数据类型的逻辑特性，而不关注硬件实现。实现基本数据类型是指在物理层面实现数据类型的逻辑特性；</p> <hr> <h2 id="算法"><a href="#算法" class="header-anchor">#</a> 算法</h2> <ul><li>所谓算法是对特定问题求解步骤的一种描述，换言之，算法给出了求解一个问题的大致思路和步骤，但它还不是程序。</li> <li>描述算法的方法
+1.自然语言;
+2.程序设计语言;
+3.流程图(框图) ;
+4.伪码语言;
+5.类c语言（c语言和伪代码结合）</li> <li>伪代码是一种包括高级程序设计语言的三种基本结构(顺序、选择、循环)和自然语言成分的“面向读者”的语言。</li></ul> <hr> <p>只谈数据结构，当然是可以，我们可以在很短的时间就把几种重要的数据结构介绍完。听完后，很可能你没什么感觉，不知道这些数据结构有何用处。但如果我们再把相应的算法也拿来讲一讲，你就会发现哦，计算机界的前辈们，的确是一些很牛很牛的人，他们使程序那么漂亮</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/" class="prev router-link-active">
+        Home
+      </a></span> <span class="next"><a href="/datastructure/queue/">
+        队列
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.acfda23a.js" defer></script><script src="/assets/js/2.691d6914.js" defer></script><script src="/assets/js/7.12551ef1.js" defer></script>
+  </body>
+</html>
