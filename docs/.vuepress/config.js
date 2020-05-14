@@ -1,7 +1,7 @@
 module.exports = {
+  base: "/study_blog/",
   themeConfig: {
     navbar: false,
-    base:"/study_blog/",
     sidebar: [
       "/",
       {
@@ -13,6 +13,11 @@ module.exports = {
           "/datastructure/stack/",
           "/datastructure/linkedlist/"
         ]
+      },
+      {
+        title: "网页API",
+        sidebarDepth: 2,
+        children: ["/webapi/date/"]
       }
     ]
   }
