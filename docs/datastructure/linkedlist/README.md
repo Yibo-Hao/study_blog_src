@@ -1,55 +1,225 @@
 ---
 title:链表
 ---
+
 # 链表
 
 ## 写在前面
+
 数据结构就是各数据元素之间的逻辑关系，大致分为集合关系，线性关系，树关系，图关系
 
-
-## 线性表逻辑结构
-由n(n≥0)个数据元素构成的有限序列。记作: L=(a1 ,a2...,an)
-
-
-![](https://user-gold-cdn.xitu.io/2020/2/28/1708c6f4ba10773c?w=819&h=457&f=png&s=309211)
-前面的珠子就叫直接前驱，后面的叫直接后继，表长就是数据元素个数
-
 ## 线性表存储结构
+
 线性表在内存中的两种数据结构
-* 链式存储
-* 顺序存储，静态，动态
 
-## ADT
+- 链式存储
+- 顺序存储，静态，动态
 
-![](https://user-gold-cdn.xitu.io/2020/2/28/1708c8161af37ea9?w=1268&h=371&f=png&s=415165)
+## 数组的缺陷
 
-![](https://user-gold-cdn.xitu.io/2020/2/28/1708c81936784625?w=1265&h=402&f=png&s=446022)
-更复杂的操作组合完成
+在很多编程语言中，数组的长度是固定的，所以当数组已被数据填满时，再要加入新的元素就会非常困难。在数组中，添加和删
+除元素也很麻烦，因为需要将数组中的其他元素向前或向后平移，以反映数组刚刚进行了
+添加或删除操作。
 
-## 静态顺序存储，动态顺序存储
-在内存中找一块固定大小地方放下，在c语言中可以由一维数组实现，如果超出该内存大小就会溢出
+JavaScript 中数组的主要问题是，它们被实现成了对象，与其他语言的数组相比，效率很低。
 
-描述顺序存储结构
-1. 存储空间的起始位置:数组data,它的存储位置就是存储空间的存储位置。
-2. 线性表的最大存储容量:数组长度MaxSize。
-3. 线性表的当前长度: length。
+除了对数据的随机访问，链表几乎可以用在任何可以使用一维数组的情况中。
 
----
-数组长度和线性表的长度
-* 注意数组长度和线性表的长度，数组的长度是存放线性表的存储空间的长度，存储分配后这个量是一般是不变的
-* 线性表的长度是线性表中数据元素的个数，随着线性表插入和删除操作的进行,这个量是变化的。
+## 链表的基本概念
+链表是由一组节点组成的集合。每个节点都使用一个对象的引用指向它的后继。指向另一
+个节点的引用叫做链。（一个变量存了其他变量的地址就叫对其他变量的引用）
 
-![](https://user-gold-cdn.xitu.io/2020/2/29/1708c8fe9e4d8da4?w=1250&h=397&f=png&s=129619)
+## 链表的基本操作
 
----
- 静态顺序存储，动态顺序存储
+* 找到值对应的节点 find(item)
+* 找到值对应的前一个节点 findPrevious(item)
+* 在值后面插入节点 insert(element,item)
+* 移除值对应的节点 remove(item)
 
-* 一般高级语言， 比如C、VB、C++都可以用编程手段实现动态分配数组，不过这会带来性能上的损耗。
-* 动态顺序存储，如果数组长度不够用了，溢出了，那么会在内存中找一块更大的地方把线性表搬过去
+## 链表的JavaScript实现
+每一个node为一个对象，因为js语言的实现，对象赋值，赋值的是地址
+```
+function Node(element) {
+  this.element = element;
+  this.next = null;
+}
+function LinkedList(head) {
+  this.head = new Node(head);
+  this.find = find;
+  this.insert = insert;
+  this.remove = remove;
+  this.findPrevious = findPrevious;
+  this.travel = travel()
+}
+function find(item) {
+  let currNode = this.head;
+  while (currNode.element !== item) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
+function insert(element, item) {
+  let newNode = new Node(element);
+  let current = this.find(item);
+  newNode.next = current.next;
+  current.next = newNode;
+}
+function remove(item) {
+  let preNode = this.findPrevious(item);
+  if (preNode) {
+    preNode.next = preNode.next.next;
+  }
+}
+function findPrevious(item) {
+  let currNode = this.head;
+  while (currNode.next && currNode.next.element !== item) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
+function travel(callback) {
+  let currNode = this.head;
+  while (currNode !== null) {
+    callback(currNode);
+    currNode = currNode.next;
+  }
+}
 
+```
 
-## 静态存储的寻址
+## 双向链表
+管从链表的头节点遍历到尾节点很简单，但反过来，从后向前遍历则没那么简单。通过
+给 Node 对象增加一个属性，该属性存储指向前驱节点的链接。
+```
+function DbNode(element) {
+  this.element = element;
+  this.next = null;
+  this.previous = null;
+}
+function DbLinkedList(head) {
+  this.head = new DbNode(head);
+  this.insert = insert;
+  this.find = find;
+  this.remove = remove;
+}
+function insert(element, item) {
+  let newNode = new DbNode(element);
+  let current = find(item);
+  newNode.next = current.next;
+  newNode.previous = current;
+  current.next = newNode;
+}
+function find(item) {
+  let currNode = this.head;
+  while (currNode.element !== item) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
+function remove(item) {
+  let currNode = find(item);
+  if (currNode !== null) {
+    currNode.previous.next = currNode.next;
+    currNode.next.previous = currNode.previous;
+  }
+}
+```
+## 循环链表
+循环链表和单向链表相似，节点类型都是一样的。唯一的区别是，在创建循环链表时，让
+其头节点的 next 属性指向它本身。
+```
+function CircularLinkedList(head) {
+  this.head = new Node(head);
+  this.head.next = this.head;
+}
+```
+加一行代码就可以解决,travel方法会死循环,remove方法也要考虑到移除头结点要考虑到this.head始终存在的问题。
 
-![](https://user-gold-cdn.xitu.io/2020/2/29/1708c94b6f9caaba?w=1116&h=281&f=png&s=86078)
-由于每个数据元素，不管它是整型、实型还是字符型，它都是需要占用一定的存储单元空间的。假设占用的是c个存储单元，那么线性表中第i+1个数据元素的存储位置和第i个数据元素的存储位置，LOC(ai) = LOC(a1) + (i-1)C 
+## 循环链表解决实际问题
+传说在公元 1 世纪的犹太战争中，犹太历史学家弗拉维奥·约瑟夫斯和他的 10 个同胞
+被罗马士兵包围。犹太士兵决定宁可自杀也不做俘虏，于是商量出了一个自杀方案。他
+们围成一个圈，从一个人开始，数到第三个人时将第三个人杀死，然后再数，直到杀光
+所有人。约瑟夫和另外一个人决定不参加这个疯狂的游戏，他们快速地计算出了两个位
+置，站在那里得以幸存。写一段程序将 n 个人围成一圈，并且第 m 个人会被杀掉，计算
+一圈人中哪两个人最后会存活。使用循环链表解决该问题。
+```
+function Node(element) {
+  this.element = element;
+  this.next = null;
+}
+function LinkedList(head) {
+  this.head = new Node(head);
+  this.head.next = this.head;
+  this.find = find;
+  this.insert = insert;
+  this.remove = remove;
+  this.findPrevious = findPrevious;
+  this.travel = travel;
+  this.advance = advance;
+}
+function find(item) {
+  let currNode = this.head;
+  while (currNode.element !== item) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
+function insert(element, item) {
+  let newNode = new Node(element);
+  let current = this.find(item);
+  newNode.next = current.next;
+  current.next = newNode;
+}
+function remove(item) {
+  let preNode = this.findPrevious(item);
+  if (preNode) {
+    if (this.find(item) === this.head) {
+      this.head = this.head.next;
+      preNode.next = this.head;
+      return;
+    }
+    preNode.next = preNode.next.next;
+  }
+}
+function findPrevious(item) {
+  let currNode = this.head;
+  while (currNode.next && currNode.next.element !== item) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
+function travel(callback) {
+  let currNode = this.head;
+  do {
+    console.log(currNode.element);
+    callback(currNode);
+    currNode = currNode.next;
+  } while (currNode.element !== this.head.element);
+}
+function advance(n) {
+  let currNode = this.head;
+  while (n > 0) {
+    currNode = currNode.next;
+    n = n - 1;
+  }
+  return currNode;
+}
+
+function code() {
+  let list = new LinkedList(1);
+  let length = 1;
+  let n = 2;
+  for (let i = 1; i < 10; i++) {
+    list.insert(i + 1, i);
+    length += 1;
+  }
+  while (length > 3) {
+    list.remove(list.advance(n).element);
+    n += 2;
+    length -= 1;
+  }
+}
+code();
+```
+
 
