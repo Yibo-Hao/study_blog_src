@@ -22,6 +22,13 @@ module.exports = {
         ]
       },
       {
+        title: "JS语言特性",
+        sidebarDepth: 2,
+        children: [
+          "/ES6/hoisting/"
+        ]
+      },
+      {
         title: "网页API",
         sidebarDepth: 2,
         children: ["/webapi/date/"]
