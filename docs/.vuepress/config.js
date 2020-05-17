@@ -1,7 +1,7 @@
 module.exports = {
   base: "/study_blog/",
   themeConfig: {
-    navbar: false,
+    navbar: true,
     sidebar: [
       "/",
       {
@@ -22,7 +22,12 @@ module.exports = {
       {
         title: "JS语言特性",
         sidebarDepth: 2,
-        children: ["/ES6/hoisting/", "/ES6/lexicalenvironment/"]
+        children: [
+          "/ES6/hoisting/",
+          "/ES6/lexicalenvironment/",
+          "/ES6/closure/",
+          "/ES6/fibonacc/"
+        ]
       },
       {
         title: "网页API",
