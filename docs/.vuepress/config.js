@@ -17,16 +17,12 @@ module.exports = {
       {
         title: "算法",
         sidebarDepth: 2,
-        children: [
-            "/algorithm/stackalgorithm/"
-        ]
+        children: ["/algorithm/stackalgorithm/"]
       },
       {
         title: "JS语言特性",
         sidebarDepth: 2,
-        children: [
-          "/ES6/hoisting/"
-        ]
+        children: ["/ES6/hoisting/", "/ES6/lexicalenvironment/"]
       },
       {
         title: "网页API",
