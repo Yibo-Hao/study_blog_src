@@ -26,7 +26,8 @@ module.exports = {
           "/ES6/hoisting/",
           "/ES6/lexicalenvironment/",
           "/ES6/closure/",
-          "/ES6/fibonacc/"
+          "/ES6/fibonacc/",
+          "/ES6/currying/"
         ]
       },
       {
