@@ -102,6 +102,7 @@ const fibfn = memozi(function (n) {
 * 计算第n个，就要去记忆里去找fibfn(n - 1) + fibfn(n - 2)
 * 我们使用memozi返回的函数即可，如果这个函数在记忆查找无果那么就会调用memozi的回调函数来进行计算
 * 记忆化：当memozi里面的回调没有变化时，就会从记忆中寻找值
+* 记忆化同样是使用闭包完成的，memozi的作用就是创建并隐藏一个cache，返回一个函数fn，每次调用fn并不会重新创建cache只是修改cache，但是每次重新调用memozi会重新创建cache
 
 
 ## Raect记忆化
