@@ -27,7 +27,8 @@ module.exports = {
           "/ES6/lexicalenvironment/",
           "/ES6/closure/",
           "/ES6/fibonacc/",
-          "/ES6/currying/"
+          "/ES6/currying/",
+          "/ES6/eventhub/"
         ]
       },
       {
