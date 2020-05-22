@@ -1,9 +1,14 @@
 {
   "devDependencies": {
-    "vuepress": "^1.5.0"
+    "vuepress": "^1.5.0",
+    "chai":"^4.2.0",
+    "mocha": "^6.2.0",
+    "sinon": "^7.4.1",
+    "sinon-chai": "^3.3.0"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "test": "mocha  /**/*.js"
   }
 }

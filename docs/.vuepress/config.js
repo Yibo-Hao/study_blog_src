@@ -1,7 +1,10 @@
 module.exports = {
   base: "/study_blog/",
   themeConfig: {
-    navbar: true,
+    nav: [
+      { text: '博客', link: '/' },
+      { text: '日记', link: '/ambition/2020/' },
+    ],
     sidebar: [
       "/",
       {
@@ -35,6 +38,14 @@ module.exports = {
         title: "网页API",
         sidebarDepth: 2,
         children: ["/webapi/date/"]
+      },
+      {
+        title: "React开发",
+        sidebarDepth: 2,
+        children: [
+            "/KpDevelopment/css in react/",
+            "/KpDevelopment/routing/"
+        ]
       }
     ]
   }
