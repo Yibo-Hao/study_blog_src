@@ -2,8 +2,8 @@ module.exports = {
   base: "/study_blog/",
   themeConfig: {
     nav: [
-      { text: '博客', link: '/' },
-      { text: '日记', link: '/ambition/2020/' },
+      { text: "博客", link: "/" },
+      { text: "日记", link: "/ambition/2020/" }
     ],
     sidebar: [
       "/",
@@ -31,7 +31,8 @@ module.exports = {
           "/ES6/closure/",
           "/ES6/fibonacc/",
           "/ES6/currying/",
-          "/ES6/eventhub/"
+          "/ES6/eventhub/",
+          "/ES6/deepclone/"
         ]
       },
       {
@@ -42,11 +43,14 @@ module.exports = {
       {
         title: "React开发",
         sidebarDepth: 2,
-        children: [
-            "/KpDevelopment/css in react/",
-            "/KpDevelopment/routing/"
-        ]
+        children: ["/KpDevelopment/css in react/", "/KpDevelopment/routing/"]
+      },
+      {
+        title: "Vue开发",
+        sidebarDepth: 2,
+        children: ["/vue/data/"]
       }
+
     ]
   }
 };
