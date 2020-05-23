@@ -32,7 +32,8 @@ module.exports = {
           "/ES6/fibonacc/",
           "/ES6/currying/",
           "/ES6/eventhub/",
-          "/ES6/deepclone/"
+          "/ES6/deepclone/",
+          "/ES6/bind/"
         ]
       },
       {
@@ -50,7 +51,6 @@ module.exports = {
         sidebarDepth: 2,
         children: ["/vue/data/"]
       }
-
     ]
   }
 };

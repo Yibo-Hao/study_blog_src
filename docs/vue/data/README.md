@@ -1,8 +1,8 @@
 ---
-title:Vue-数据响应式-数据的监听和代理
+title:Vue-数据响应式-数据的监听和代理/Object.defineProperty
 ---
 
-# Vue-数据响应式-数据的监听和代理
+# Vue-数据响应式-数据的监听和代理/Object.defineProperty
 
 ## 写在前面
 vue的核心在于main.js文件里面的new vue，它根据接受的选项对象，把视图、数据和事件结合一起渲染到屏幕上  
