@@ -20,7 +20,7 @@ module.exports = {
       {
         title: "算法",
         sidebarDepth: 2,
-        children: ["/algorithm/stackalgorithm/"]
+        children: ["/algorithm/time/", "/algorithm/stackalgorithm/"]
       },
       {
         title: "JS语言特性",
