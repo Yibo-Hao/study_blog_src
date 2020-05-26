@@ -1,5 +1,5 @@
 class EventHub {
-  private cache: {[key:string]:Array<(...data) => void>} = {};
+  cache: {[key:string]:Array<(...data) => void>} = {};
   on(eventName: string, fn: (data: unknown)=>void) {
     this.cache[eventName] = this.cache[eventName] || [];
     this.cache[eventName].push(fn);
