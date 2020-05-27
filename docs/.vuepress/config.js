@@ -33,7 +33,9 @@ module.exports = {
           "/ES6/currying/",
           "/ES6/eventhub/",
           "/ES6/deepclone/",
-          "/ES6/bind/"
+          "/ES6/bind/",
+          "/ES6/promise/",
+          "/ES6/promise2/"
         ]
       },
       {

@@ -161,7 +161,7 @@ class MyPromise {
       }
     };
     try {
-      executor(resolve, reject); //核心代码
+      executor(resolve, reject); 
     } catch (err) {
       reject(err);
     }
