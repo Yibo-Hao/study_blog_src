@@ -51,7 +51,7 @@ module.exports = {
       {
         title: "Vue开发",
         sidebarDepth: 2,
-        children: ["/vue/data/","/vue/router/"]
+        children: ["/vue/data/","/vue/router-1/","/vue/router-2/"]
       },
       {
         title: "JS生态",
