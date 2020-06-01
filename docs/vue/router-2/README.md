@@ -2,7 +2,7 @@
 title:router
 ---
 
-# Vue 开发-router-2
+# Vue 开发-router-高级
 
 ## 导航守卫
 

@@ -7,7 +7,5 @@
     <content url="file://$MODULE_DIR$/node_modules" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="@types/mocha" level="application" />
-    <orderEntry type="library" name="@types/chai" level="application" />
   </component>
 </module>

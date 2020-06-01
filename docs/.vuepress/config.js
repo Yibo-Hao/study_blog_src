@@ -46,7 +46,7 @@ module.exports = {
       {
         title: "React开发",
         sidebarDepth: 2,
-        children: ["/KpDevelopment/css in react/", "/KpDevelopment/routing/"]
+        children: ["/KpDevelopment/css in react/", "/KpDevelopment/routing/","/KpDevelopment/react-router/"]
       },
       {
         title: "Vue开发",

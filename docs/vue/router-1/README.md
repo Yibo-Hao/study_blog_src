@@ -2,7 +2,7 @@
 title:router
 ---
 
-# Vue 开发-router-1
+# Vue 开发-router-基础
 
 ## Vue.js + Vue Router
 
