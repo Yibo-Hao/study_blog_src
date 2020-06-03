@@ -28,3 +28,29 @@ overflow: inherit;
 ```
 
 为使 overflow 有效果，块级容器必须有一个指定的高度（height 或者 max-height）或者将 white-space 设置为 nowrap。
+
+## reset
+
+```css
+*,*::before,*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button,input{
+  border: none;
+}
+ul,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+}
+```
+
+## a标签样式 
