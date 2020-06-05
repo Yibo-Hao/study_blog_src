@@ -203,26 +203,29 @@ function App() {
 ## 路由的三个基础组件
 
 ### Router
-* 网页端用到的所有组件都从 react-router-dom 引入
-* 所有SPA的核心都应该是一个 Router 组件，react-router-dom 提供了 BrowserRouter and HashRouter
-* 确保 router 包裹了根组件
+
+- 网页端用到的所有组件都从 react-router-dom 引入
+- 所有 SPA 的核心都应该是一个 Router 组件，react-router-dom 提供了 BrowserRouter and HashRouter
+- 确保 router 包裹了根组件
 
 ```jsx
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+<BrowserRouter>
+  <App />
+</BrowserRouter>
 ```
 
 ### Route
-* Route 被 Switch 包裹
-* Switch 会搜寻子组件 Route 元素来找到谁的path匹配当前 url ，匹配后就会渲染该 Route 并且忽略其他
-* 没匹配到就不渲染（null）
-* 因为 Route path 匹配的是 url 的开始并不是整个url，所以把 "/" 放在最后一个因为 url 总是以 / 开头，总会匹配到，把 "/contact/:id" 放在 "/contact" 前面。
-* `<Route exact path="/">`可以匹配整个url
+
+- Route 被 Switch 包裹
+- Switch 会搜寻子组件 Route 元素来找到谁的 path 匹配当前 url ，匹配后就会渲染该 Route 并且忽略其他
+- 没匹配到就不渲染（null）
+- 因为 Route path 匹配的是 url 的开始并不是整个 url，所以把 "/" 放在最后一个因为 url 总是以 / 开头，总会匹配到，把 "/contact/:id" 放在 "/contact" 前面。
+- `<Route exact path="/">`可以匹配整个 url
 
 ### Link
-* `<Link to="/">Home</Link>// <a href="/">Home</a>`
-* NavLink 是特殊的 Link 
+
+- `<Link to="/">Home</Link>// <a href="/">Home</a>`
+- NavLink 是特殊的 Link
 
 ```jsx
 <NavLink to="/react" activeClassName="hurray">
@@ -235,4 +238,19 @@ function App() {
 // When it's something else:
 // <a href="/react">React</a>
 ```
-* 重定向 `<Redirect to="/login" />`
+
+- 也就是说 NavLink 是特殊的 Link 它会在匹配时处于“激活”状态
+
+```jsx
+<NavLink
+  to="/faq"
+  activeStyle={{
+    fontWeight: "bold",
+    color: "red",
+  }}
+>
+  FAQs
+</NavLink>
+```
+
+- 重定向 `<Redirect to="/login" />`
