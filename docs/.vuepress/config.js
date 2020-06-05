@@ -35,7 +35,8 @@ module.exports = {
           "/ES6/deepclone/",
           "/ES6/bind/",
           "/ES6/promise/",
-          "/ES6/promise2/"
+          "/ES6/promise2/",
+          "/ES6/eventloop/"
         ]
       },
       {
@@ -46,12 +47,16 @@ module.exports = {
       {
         title: "React开发",
         sidebarDepth: 2,
-        children: ["/KpDevelopment/css in react/", "/KpDevelopment/routing/","/KpDevelopment/react-router/"]
+        children: [
+          "/KpDevelopment/css in react/",
+          "/KpDevelopment/routing/",
+          "/KpDevelopment/react-router/"
+        ]
       },
       {
         title: "Vue开发",
         sidebarDepth: 2,
-        children: ["/vue/data/","/vue/router-1/","/vue/router-2/"]
+        children: ["/vue/data/", "/vue/router-1/", "/vue/router-2/"]
       },
       {
         title: "JS生态",
@@ -61,7 +66,7 @@ module.exports = {
       {
         title: "CSS",
         sidebarDepth: 2,
-        children: ["/css/","/css/line-height/"]
+        children: ["/css/", "/css/line-height/"]
       }
     ]
   }
