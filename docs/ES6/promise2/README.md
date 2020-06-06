@@ -177,3 +177,15 @@ function resolvePromise(promise2, x, resolve, reject) {
 1. executor 中计算出来的值（不是返回值），作为resolve()的参数
 2. resolve 函数中把参数value，传到this.value
 3. then的onfulfilled，用this.value作为参数
+
+## promise.all的问题
+* 当其中一个promise被reject后就会被终止，无法得知其他promise的情况
+* 我们可以用allsetted，但是兼容性不好
+```js
+Promise.all([
+    task().then(()=>{"OK"},()=>{"not OK"})
+    task2().then(()=>{"OK"},()=>{"not OK"})
+    task3().then(()=>{"OK"},()=>{"not OK"})
+]).then((result)=>{console.log(result);})
+```
+用到了当onRejected执行成功时相当于错误被捕获了，变成了fulfilled状态

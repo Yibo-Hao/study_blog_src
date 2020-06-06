@@ -36,7 +36,8 @@ module.exports = {
           "/ES6/bind/",
           "/ES6/promise/",
           "/ES6/promise2/",
-          "/ES6/eventloop/"
+          "/ES6/eventloop/",
+          "/ES6/await/"
         ]
       },
       {
@@ -67,6 +68,16 @@ module.exports = {
         title: "CSS",
         sidebarDepth: 2,
         children: ["/css/", "/css/line-height/"]
+      },
+      {
+        title: "设计模式",
+        sidebarDepth: 2,
+        children: ["/design/"]
+      },
+      {
+        title: "刷题",
+        sidebarDepth: 2,
+        children: ["/ti/"]
       }
     ]
   }
